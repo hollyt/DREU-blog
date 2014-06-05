@@ -21,15 +21,15 @@ body {
   font-family: 'Droid Sans Mono';
   font-weight: 400; 
   padding-top: 51px; 
-  background: #1E1E1E;
-  color: #f9f9f9;
+  background: #A4A4A4;
+  color: #424242
 }
 a {
-  color:#CED8F6;
+  color:#4C6374;
 }
 
 a:hover {
-  color:#A9BCF5;
+  color:#9CB3C4;
   text-decoration: none;
 }
 
@@ -66,11 +66,11 @@ a:hover {
   font-family: 'Droid Sans Mono';
   font-weight: 400; 
   padding-left:1px;
-  color:#ffffff;
+  color:#424242;
 }
 #sidebar li a:hover {
-  background-color:#222222;
-  color:#ffffff;
+  background-color:#9CB3C4;
+  color:#4C6374;
 }
 
 /* collapsed sidebar styles */
