@@ -1,0 +1,92 @@
+
+<!-- :-) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!-- da fonts -->
+	    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
+
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="My DREU 2014 Blog">
+	    <meta name="author" content="Holly Tancredi">
+	    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+	    <link href="../assets/style.css" rel="stylesheet">
+	    <title>BLOG // Week 3</title>
+	</head>
+
+<body>
+
+<div class="main">
+
+	<div class="container">
+
+		<div class="top"><h1>Holly Tancredi</h1><h2>DREU 2014</h2><img src="../assets/img/hcii.png"></div>
+
+		<div class="menu">
+			<a href="index.html"><span>About Me</span></a>
+			<a href="mentor.html"><span>About My Mentor</span></a>
+			<a href="project.html"><span>About My Project</span></a>
+			<a href="http://www.cra-w.org/dreu" id="last"><span>The DREU Program</span></a>
+		</div>
+
+		<div class="content">
+
+			<div class="item">
+				<h1>Week 3 - 06.09.14 - 06.13.14</h1>
+
+				<p>This week I really started to work on building my classifier. It will be implemented in C++ and use the libsvm library for Support Vector Machine Implementation. </p>
+
+				<p>I’m using data that was collected when the lab ran studies in which they recorded 16 dyads (8 friend dyads and 8 stranger dyads) working together to tutor each other in algebra. The data including low-level audio features, low-level visual features, and dyadic features* was extracted by a phD student in the lab and saved in the form of a Matlab vector. The libsvm library takes a very specifically formatted text file as input, so I needed to find a way to convert the Matlab data into the libsvm format:
+				<BR><BR>
+				[label][index1]:[value1][index2]:[value2] … </p>
+
+				<p>It took quite a bit longer than I expected to get the data in the correct format since I’m dealing with a lot of data and I need to make sure that everything is formatted correctly and nothing gets mixed up in the conversion process.</p>
+
+				<p>I ended up having to go through multiple steps to get the data in the correct format:
+				<ol>
+					<li>Use the Matlab function xlswrite() to convert the matrix into an xls file.</li>
+					<li>Convert the xls file into a CSV file in Excel.</li>
+					<li>Write a Python script that converts the CSV file into a text file, adds the correct index to each feature value, converts the text file to a train file, and adds the binary friend classification value to each data point.</li>
+				</ol>
+
+				<p>My reading list for this week focused on influential work in the field of Embodied Conversational Agents by Justine.</p>
+				<BR>
+				<p>
+				<b><u>WEEK 3 READING LIST:</b></u>
+				<BR><BR>	
+				Cassell, J. (2000). Nudge nudge wink wink: Elements of face-to-face conversation for embodied conversational agents. Embodied conversational agents, 1-27.
+				<BR><BR>
+				Cassell, J., Bickmore, T., Campbell, L., Vilhjalmsson, H., & Yan, H. (2001). More than just a pretty face: conversational protocols and the affordances of embodiment. Knowledge-Based Systems, 14(1), 55-64.
+				<BR><BR>
+				Mascarenhas, S., Prada, R., Paiva, A., & Hofstede, G. J. (2013, January). Social importance dynamics: A model for culturally-adaptive agents. In Intelligent Virtual Agents (pp. 325-338). Springer Berlin Heidelberg.
+				<BR><BR>
+				Nakano, Y. I., Reinstein, G., Stocky, T., & Cassell, J. (2003, July). Towards a model of face-to-face grounding. In Proceedings of the 41st Annual Meeting on Association for Computational Linguistics-Volume 1 (pp. 553-561). Association for Computational Linguistics.
+				</p>
+				<hr>
+				<p>* Dyadic features are multimodal patterns of interaction between two people. We use number and average length of conversational turns, mutual smile and non-mutual smile, mutual gaze and non-mutual gaze, mutual lean forward and non-mutual lean forward, and mutual gaze followed by mutual smile.</p>
+			</div>
+
+		</div>
+		
+		<div class="footer">
+		
+			<!-- (▰˘◡˘▰) -->
+			<!-- (&#9648;&#728;&#9697;&#728;&#9648;) -->
+			<center><a href="week2.html">[WEEK 2]</a> <a href="week4.html">[WEEK 4]</a></center>
+
+			<div class="clearer"><span></span></div>
+		
+		</div>
+
+	</div>	
+
+</div>
+
+</body>
+
+</html>
