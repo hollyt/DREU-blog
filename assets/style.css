@@ -10,6 +10,10 @@ body {
 	text-align: center;
 	font: normal 0.9em sans-serif,Arial;
 }
+img {
+	max-width: 100%;
+	height: auto;
+}
 
 /* top thingy */
 .top {
