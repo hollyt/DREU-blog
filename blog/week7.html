@@ -1,0 +1,88 @@
+
+<!-- :-) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!-- da fonts -->
+	    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
+
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="My DREU 2014 Blog">
+	    <meta name="author" content="Holly Tancredi">
+	    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+	    <link href="../assets/style.css" rel="stylesheet">
+	    <title>BLOG // Week 7</title>
+	</head>
+
+<body>
+
+<div class="main">
+
+	<div class="container">
+
+		<div class="top"><h1>Holly Tancredi</h1><h2>DREU 2014</h2><img src="../assets/img/hcii.png"></div>
+
+		<div class="menu">
+			<a href="../index.html"><span>About Me</span></a>
+			<a href="../mentor.html"><span>About My Mentor</span></a>
+			<a href="../project.html"><span>About My Project</span></a>
+			<a href="http://www.cra-w.org/dreu" id="last"><span>The DREU Program</span></a>
+		</div>
+
+		<div class="content">
+
+			<div class="item">
+				<h1>Week 7 - 07.07.14 - 07.11.14</h1>
+
+				<p>I spent this week continuing to train and test my classifier in order to make it as accurate as possible. We decided to split the data set up into data for 24 individual people rather than 12 dyads.</p>
+
+				<p>The reasoning behind this change is that when the classifier is implemented in our virtual human and predicts friendship status in real-time, it will be calculating data for itself and for the human user separately. Training the classifier by splitting the data more closely represents the context of the real-time system.</p>
+
+				<p>Splitting up the dyads means that there's a lot more data to deal with now - 4518 data points and 1084 features! I needed to figure out a way to easily split the data up into training and testing sets, and unfortunately Python scripting is really inefficient for that since I didn't want to have to re-write the data file every time I made a change to it.</p>
+
+				<p>I ended up taking advantage of the lab's server and using <a href="https://www.gnu.org/software/sed/manual/sed.html">sed</a> to easily and quickly manage the data set. Here's a little example of what I did to break the data up into training and testing sets:</p>
+				
+			<pre><code>
+			sed -n '1,145 p' &#60;datafile >testfile
+			sed '1,145 d' &#60;datafile >trainingfile
+			</pre></code>
+				<BR>
+				<p>For example, say we want to train our algorithm on the data for all people expect Person 1, and then test the accuracy of the algorithm on the data from Person 1. If lines 1 - 145 in the data file belong to Person 1, these sed commands create a training file with all data except Person 1's data and creates a testing file with Person 1's data.</p>
+				<BR>
+				<p>
+				<b><u>WEEK 7 READING LIST:</b></u>
+				<BR><BR>
+				Bevacqua, E., Mancini, M., Niewiadomski, R., & Pelachaud, C. (2007, April). An expressive ECA showing complex emotions.In Proceedings of the AISB annual convention, Newcastle, UK (pp. 208-216).
+				<BR><BR>
+				Ochs, M., & Pelachaud, C. (2013). Socially Aware Virtual Characters: The Social Signal of Smiles [Social Sciences]. Signal Processing Magazine, IEEE, 30(2), 128-132.
+				<BR><BR>	
+				Spencer-Oatey, H. (2005). (Im) politeness, face and perceptions of rapport: unpackaging their bases and interrelationships.
+				<BR><BR>
+				Vinciarelli, A., Pantic, M., Heylen, D., Pelachaud, C., Poggi, I., D'Errico, F., & Schröder, M. (2012). Bridging the gap between social animal and unsocial machine: A survey of social signal processing. Affective Computing, IEEE Transactions on, 3(1), 69-87.
+				</p>
+			</div>
+
+		</div>
+		
+		<div class="footer">
+		
+			<!-- (▰˘◡˘▰) -->
+			<!-- (&#9648;&#728;&#9697;&#728;&#9648;) -->
+			<center><a href="week6.html">[WEEK 6]</a> <!-- <a href="week8.html">[WEEK 8] --></a></center>
+
+			<div class="clearer"><span></span></div>
+		
+		</div>
+
+	</div>	
+
+</div>
+
+</body>
+
+</html>
