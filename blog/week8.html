@@ -1,0 +1,91 @@
+
+<!-- :-) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!-- da fonts -->
+	    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
+
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="My DREU 2014 Blog">
+	    <meta name="author" content="Holly Tancredi">
+	    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+	    <link href="../assets/style.css" rel="stylesheet">
+	    <title>BLOG // Week 8</title>
+	</head>
+
+<body>
+
+<div class="main">
+
+	<div class="container">
+
+		<div class="top"><h1>Holly Tancredi</h1><h2>DREU 2014</h2><img src="../assets/img/hcii.png"></div>
+
+		<div class="menu">
+			<a href="../index.html"><span>About Me</span></a>
+			<a href="../mentor.html"><span>About My Mentor</span></a>
+			<a href="../project.html"><span>About My Project</span></a>
+			<a href="http://www.cra-w.org/dreu" id="last"><span>The DREU Program</span></a>
+		</div>
+
+		<div class="content">
+
+			<div class="item">
+				<h1>Week 8 - 07.14.14 - 07.18.14</h1>
+
+				<p>I'm continuing to do pre-processing on the data to raise the accuracy of my classifier. I used a libsvm tool, <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/#feature_selection_tool">fselect.py</a> for feature selection. This Python script takes the entire training set as input and calculates the f-score in order to find which features yield the highest prediction accuracy.</p>
+
+				<p>I split the data up into 3 categories:
+					<ul>
+						<li>Audio Features Only</li>
+						<li>Visual Features Only</li>
+						<li>Dyadic Features Only</li>
+					</ul>
+				First, I trained and tested the classifier on each of these data sets separately, without performing feature selection, so I could compare those results to the results after feature selection. Then, I ran the feature selection tool on each of the categories of data to pick which features are most important for audio, visual, and dyadic.</p>
+
+				<p>After performing the feature selection and only training on the most important features, the accuracy raised to 82%! I created a little chart to show the difference in accuracy when training my classifier on using the different feature sets:
+				<BR>
+				<img src="../assets/img/accuracychart.png">
+				<BR>
+				</p>
+
+				<p>The "Most Important Features" data set is a combination of the most important audio features, visual features, and dyadic features. These accuracy results show that multimodal data yields a more accurate prediction of friendship than just audio or visual data alone.</p>
+				<BR>
+				<p>
+				<b><u>WEEK 8 READING LIST:</b></u>
+				<BR><BR>
+				Bevacqua, E., De Sevin, E., Hyniewska, S. J., & Pelachaud, C. (2012). A listener model: introducing personality traits. Journal on Multimodal User Interfaces, 6(1-2), 27-38.
+				<BR><BR>
+				Demeure, V., Niewiadomski, R., & Pelachaud, C. (2011). How is believability of a virtual agent related to warmth, competence, personification, and embodiment?. Presence: Teleoperators and Virtual Environments, 20(5), 431-448.
+				<BR><BR>
+				Pelachaud, C. (2009). Studies on gesture expressivity for a virtual agent. Speech Communication, 51(7), 630-639.
+				<BR><BR>	
+				Schroder, M., Bevacqua, E., Cowie, R., Eyben, F., Gunes, H., Heylen, D., ... & Wollmer, M. (2012). Building autonomous sensitive artificial listeners. Affective Computing, IEEE Transactions on, 3(2), 165-183.
+				</p>
+			</div>
+
+		</div>
+		
+		<div class="footer">
+		
+			<!-- (▰˘◡˘▰) -->
+			<!-- (&#9648;&#728;&#9697;&#728;&#9648;) -->
+			<center><a href="week7.html">[WEEK 7]</a> <!-- <a href="week9.html">[WEEK 9] --></a></center>
+
+			<div class="clearer"><span></span></div>
+		
+		</div>
+
+	</div>	
+
+</div>
+
+</body>
+
+</html>
